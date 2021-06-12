@@ -12,6 +12,7 @@ conn=pymysql.connect(
 cursor = conn.cursor()
 
 app = Flask(__name__)
+
 @app.route('/')
 def index():
     select = "select * from schedule order by year , month , day"
